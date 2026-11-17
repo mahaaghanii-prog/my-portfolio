@@ -1,0 +1,176 @@
+/* ===== Personal Portfolio - style.css (used by all pages) ===== */
+
+/* Universal selector: makes width calculations simpler
+   (padding and border are included inside the width) */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial;
+  margin: 0;
+  background-color: white;
+  color: black;
+  line-height: 1.6;
+}
+
+/* ----- Header ----- */
+.header {
+  background-color: navy;
+  color: white;
+  padding: 20px;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 30px;
+}
+
+.header p {
+  margin: 5px 0 0 0;
+}
+
+/* ----- Navigation links ----- */
+.nav {
+  text-align: center;
+  padding: 10px;
+  background-color: white;
+}
+
+.nav a {
+  color: black;
+  font-weight: bold;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+.nav a:hover {
+  text-decoration: underline;
+}
+
+/* The link of the page you are currently on */
+.nav a.active {
+  color: navy;
+  text-decoration: underline;
+}
+
+/* ----- Images ----- */
+.banner {
+  width: 100%;
+  height: auto;
+}
+
+.profile {
+  width: 150px;
+  border: 3px solid navy;
+  border-radius: 8px;
+}
+
+/* ----- Welcome section ----- */
+.welcome {
+  background-color: lightcyan;
+  text-align: center;
+  padding: 30px;
+}
+
+/* ----- Headings ----- */
+h2, h3 {
+  color: navy;
+}
+
+/* ----- Main content boxes ----- */
+.box {
+  background-color: white;
+  padding: 20px;
+  margin: 15px;
+  border: 2px solid lightgray;
+  border-radius: 8px;
+}
+
+/* ----- Cards (used for skills and projects) ----- */
+.card {
+  display: inline-block;
+  vertical-align: top;
+  width: 30%;
+  margin: 1%;
+  padding: 15px;
+  background-color: lightcyan;
+  border: 2px solid lightgray;
+  border-radius: 8px;
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+}
+
+/* ----- Tables ----- */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  border: 1px solid gray;
+  padding: 10px;
+  text-align: left;
+}
+
+th {
+  background-color: navy;
+  color: white;
+}
+
+caption {
+  font-weight: bold;
+  padding: 8px;
+}
+
+/* ----- Definition list (experience) ----- */
+dt {
+  font-weight: bold;
+  color: navy;
+  margin-top: 10px;
+}
+
+/* ----- Footer ----- */
+.footer {
+  background-color: navy;
+  color: white;
+  text-align: center;
+  padding: 15px;
+}
+
+.footer p {
+  margin: 0;
+}
+
+/* ===== Responsive design (media queries) ===== */
+
+/* Tablet: two cards per row */
+@media screen and (min-width: 601px) and (max-width: 900px) {
+  .card {
+    width: 46%;
+  }
+}
+
+/* Mobile: cards stacked vertically */
+@media screen and (max-width: 600px) {
+  .card {
+    width: 98%;
+  }
+
+  .header h1 {
+    font-size: 24px;
+  }
+
+  .box {
+    margin: 10px;
+    padding: 12px;
+  }
+
+  .nav a {
+    display: inline-block;
+    margin: 5px 8px;
+  }
+}
